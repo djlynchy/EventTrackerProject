@@ -3,16 +3,16 @@ package com.skilldistillery.eventtracker.services;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.skilldistillery.eventtracker.entities.Reload;
 import com.skilldistillery.eventtracker.repositories.ReloadRepository;
 
 
 @Service
 public class ReloadServiceImpl implements ReloadService {
+
 
 	@Autowired
 	ReloadRepository repo;
@@ -60,6 +60,21 @@ public class ReloadServiceImpl implements ReloadService {
 		return reload;
 	}
 
+	@Override
+	public List<Reload> findAll() {
+		return repo.findAll();
+	}
 
+	@Override
+	public Reload updateReload(Reload reload, Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-}
+	@Override
+	public Reload updateReload(Reload reload, int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+ }
